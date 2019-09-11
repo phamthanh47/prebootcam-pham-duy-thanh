@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function matran(arr){
+        let i;
+        let j;
+        let sum=0;
+        for(i=0;i< arr.length;i++){
+            for(j=0;j< arr[i].length;j++) {
+                if (i == j) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+    let arr1= [
+        [1,2,3,4],
+        [3,4,5,6],
+        [4,5,6,7],
+        [4,7,8,9]
+
+    ];
+    let result1= matran(arr1);
+    document.write(result1);//20
+</script>
+</body>
+</html>

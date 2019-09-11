@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="text1"> Enter a number : </label>
+<input type="text" id="text1">
+<input type="button" id="btn" value="Show" onclick=" tinh();">
+<script>
+    function bool(n) {
+        let check = true;
+        let i;
+        if (n < 2) {
+            check = false;
+        } else {
+            for (i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+        return check;
+    }
+    function tinh() {
+        let m = parseInt(document.getElementById("text1").value);
+        let i;
+        for (i = 2; i <= m; i++) {
+            if (bool(i) == true) {
+                document.write(i+" ");
+            }
+        }
+    }
+</script>
+</body>
+</html>

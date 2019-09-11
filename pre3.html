@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function YearsOld(year){
+        this.year=year;
+        this.getYear= function(){
+            return this.year;
+        }
+        this.setYear= function(year){
+            this.year = year;
+        }
+        this.sumYear = function(){
+            var date= new Date();
+            return   ( parseInt(date.getFullYear())   -   parseInt(this.year) );
+        }
+    }
+    let n = parseInt(prompt("enter a year: "));
+    let result= new YearsOld(n);
+    let result1= result.sumYear(n);
+    document.write("tuổi của bạn là: "+ result1);
+</script>
+</body>
+</html>
