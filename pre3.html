@@ -16,6 +16,10 @@
         }
         this.sumYear = function(){
             var date= new Date();
+            if(this.year > date.getFullYear()){
+                alert(" khong hop le");
+            }
+            else
             return   ( parseInt(date.getFullYear())   -   parseInt(this.year) );
         }
     }
